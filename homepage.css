@@ -1,0 +1,188 @@
+@font-face {
+    font-family: spaceFont;
+    src: url(fontit/Titling-Gothic-Regular.ttf)
+}
+
+@font-face {
+    font-family: spaceFont;
+    src: url(fontit/Titling-Gothic-Bold.ttf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: spaceFontMid;
+    src: url(fontit/Titling-Gothic-Medium.ttf);
+}
+
+
+body {
+    font-family: spaceFont;
+    margin: 0px;
+}
+
+.header {
+    height: 100px;
+    padding-left: 8%;
+    padding-right: 8%;
+
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+
+    font-size: 1.4rem;
+}
+
+.header-right {
+    width: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-link {
+    letter-spacing: 1px;
+    font-size: 1.4rem;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+.join-button {
+    font-family: spaceFont;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: white;
+    font-size: 1.6rem;
+
+    background-color: transparent;
+    border: red 1px solid;
+    height: 40px;
+    padding: 25px 20px 25px 20px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+}
+
+
+.header-left {
+    font-family: spaceFontMid;
+    letter-spacing: 2px;
+    color: white;
+
+    display: flex;
+    align-items: center;
+}
+
+.logo-link {
+    margin-left: 15px;
+    cursor: pointer;
+    font-size: 1.8rem;
+}
+
+.rebel-logo {
+    height: 45px;
+    cursor: pointer;
+}
+
+/* Hero page */
+
+.hero-image {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-page {
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-bottom: 500px;
+}
+
+.hero-page-left {
+    margin-top: 150px;
+    width: 50%;
+    height: 500px;
+}
+
+.hero-title {
+    font-weight: bold;
+    color: white;
+    letter-spacing: 5px;
+    font-size: 5.6rem;
+
+    line-height: 1;
+
+    margin-bottom: 40px;
+}
+
+.hero-subtitle {
+    color: white;
+    letter-spacing: 2px;
+    font-size: 1.8rem;
+
+    margin-bottom: 40px;
+}
+
+.hero-join-button {
+    height: 70px;
+    padding-left: 55px;
+    padding-right: 55px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+
+    background-color: red;
+
+    font-weight: bold;
+    color:white;
+    font-size: 1.9rem;
+
+    transition: ease 0.5s background-color;
+    cursor: pointer;
+
+    margin-bottom: 20px;
+}
+
+.hero-join-button:hover {
+    background-color: rgb(211, 16, 16);
+}
+
+.hero-join-button:active {
+    background-color: rgb(171, 14, 14);
+}
+
+.social-proof {
+    display: flex;
+    align-items: center;
+}
+
+.referral-text {
+    margin-left: 15px;
+    color: white;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.referral-image {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+
+    margin-left: -20px;
+}
+
+.referral-image:first-child {
+    margin-left: 0px;
+}
+
+.referral-images {
+    display: flex;
+}
+
+/* Fix overlapping issue */
+.referral-image:nth-child(1) { z-index: 3; }
+.referral-image:nth-child(2) { z-index: 2; }
+.referral-image:nth-child(3) { z-index: 1; }
