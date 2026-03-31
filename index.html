@@ -18,7 +18,7 @@
       <a class="header-link">Our Ships</a>
       <a class="header-link">Mission</a>
       <a class="header-link">Donations</a>
-      <button class="join-button">JOIN NOW</button>
+      <button class="join-button" id="join-btn">JOIN NOW</button>
     </div>
   </header>
 
@@ -42,7 +42,7 @@
       <div class="hero-subtitle">
         The Rebel alliance is fighting to get rid of the evil empire, join the resistance to create a better future for your children.
       </div>
-      <button class="hero-join-button">
+      <button class="hero-join-button" id="hero-join-btn">
         JOIN NOW FOR FREE
       </button>
       <div class="social-proof">
@@ -58,5 +58,106 @@
       </div>
     </div>
   </div>
+
+
+  <!-- Pop Up -->
+  <div id="pop-up-form" class="hide popUp">
+    <img src="images/sing-up-alientv.png" class="sign-up-bg">
+    <form id="contact-form" class="popUpForm">
+      <h1>Sign Up</h1>
+      <label class="pop-up-label" for="name">Name:</label>
+      <input class="signup-box" placeholder="Type your name..." type="text" id="name" name="name" required>
+      
+      <label class="pop-up-label" for="email">Email:</label>
+      <input class="signup-box" placeholder="Type your email..." type="email" id="email" name="email" required>
+      
+      <button id="submit-button" class="submit-button" type="submit">Submit</button>
+      <button class="close-button" type="button" id="closeForm">Close</button>
+    </form>
+  </div>
+
+
+
+  <div class="cards-page">
+      <div class="cards-container">
+        <div class="card">
+          <a href="#" class="card-picture">
+          <img src="images/sherik.png" alt="mr shrek" class="card-image" >
+          </a>
+          <a href="#" class="card-title-link">
+            <h1 class="card-title">Herra Shrek</h1>
+          </a>
+
+          <div class="card-tags">
+            <button class="tags">UX Design</button>
+            <button class="tags">Dancing</button>
+            <button class="tags">Driving</button>
+          </div>
+          <button class="card-buy">Sigma Community</button>
+        </div>
+
+        <div class="card">
+          <a href="#" class="card-picture">
+          <img src="images/sherik.png" alt="mr shrek" class="card-image" >
+          </a>
+          <a href="#" class="card-title-link">
+            <h1 class="card-title">Responsive Grid Cards</h1>
+          </a>
+
+          <div class="card-tags">
+            <button class="tags">UX Design</button>
+            <button class="tags">Dancing</button>
+            <button class="tags">Driving</button>
+          </div>
+          <button class="card-buy">Figma Community</button>
+        </div>
+
+        <div class="card">
+          <a href="#" class="card-picture">
+          <img src="images/sherik.png" alt="mr shrek" class="card-image" >
+          </a>
+          <a href="#" class="card-title-link">
+            <h1 class="card-title">Responsive Grid Cards</h1>
+          </a>
+
+          <div class="card-tags">
+            <button class="tags">UX Design</button>
+            <button class="tags">Dancing</button>
+            <button class="tags">Driving</button>
+          </div>
+          <button class="card-buy">Figma Community</button>
+        </div>
+
+        <div class="card">
+          <a href="#" class="card-picture">
+            <img src="images/sherik.png" alt="mr shrek" class="card-image" >
+          </a>
+          <a href="#" class="card-title-link">
+            <h1 class="card-title">Responsive Grid Cards</h1>
+          </a>
+
+          <div class="card-tags">
+            <button class="tags">UX Design</button>
+            <button class="tags">Dancing</button>
+            <button class="tags">Driving</button>
+          </div>
+          <button class="card-buy">Figma Community</button>
+        </div>
+      </div>
+   </div>
+
+
+
+  <script type="text/javascript"
+          src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function(){
+        emailjs.init({
+          publicKey: "tDaTwWNMuxn9WrOgH",
+        });
+    })();
+  </script>
+  <script src="homepage-script.js"></script>
 </body>
 </html>

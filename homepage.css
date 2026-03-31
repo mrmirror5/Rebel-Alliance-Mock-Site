@@ -19,6 +19,11 @@ body {
     margin: 0px;
 }
 
+html {
+    scrollbar-width: normal;
+    scrollbar-color: rgb(171, 14, 14) rgb(51, 51, 51);
+}
+
 .header {
     height: 100px;
     padding-left: 8%;
@@ -29,6 +34,8 @@ body {
     justify-content: space-between;
 
     font-size: 1.4rem;
+
+    margin-bottom: 150px;
 }
 
 .header-right {
@@ -120,18 +127,18 @@ body {
     height: 40px;
     
     /* filter: invert(100%) sepia(0%) saturate(3433%) hue-rotate(261deg) brightness(113%) contrast(103%); */
-}
+} 
 
 .hero-page {
     padding-left: 8%;
     padding-right: 8%;
-    padding-bottom: 500px;
+    display: flex
+;
 }
 
 .hero-page-left {
-    margin-top: 150px;
     width: 50%;
-    height: 500px;
+    height: calc(100vh - 250px);
 }
 
 .hero-title {
@@ -213,3 +220,244 @@ body {
 .referral-image:nth-child(1) { z-index: 3; }
 .referral-image:nth-child(2) { z-index: 2; }
 .referral-image:nth-child(3) { z-index: 1; }
+
+
+
+
+
+
+/* Pop Up Form */
+
+.popUp {
+    border: 4px solid white;
+    width: 50%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+
+    padding-top: 2%;
+    padding-bottom: 2%;
+
+    background-color:rgb(72, 13, 0);
+    color: rgb(255, 255, 255);
+    letter-spacing: 1px;
+
+    display: flex;
+    justify-content: center;
+
+    /* Alien Tv bg */
+   
+}
+
+.sign-up-bg {
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100% ;
+    object-fit: cover;
+}
+
+.popUpForm {
+    display: flex;
+    flex-direction:column;
+    width: 50%;
+}
+
+.hide {
+    display: none;
+}
+
+h1 {
+    font-size: 2.4rem;
+}
+
+.pop-up-label {
+    font-size: 1.8rem;
+}
+
+.signup-box {
+    box-sizing: border-box;
+    height: 70px;
+    font-size: 1.4rem;
+    font-family: spaceFontMid;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 30px;
+}
+
+.submit-button {
+    height: 70px;
+    padding-left: 55px;
+    padding-right: 55px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+
+    background-color: red;
+
+    font-weight: bold;
+    color:white;
+    font-size: 1.9rem;
+
+    transition: ease 0.5s background-color;
+    cursor: pointer;
+
+    margin-bottom: 20px;
+}
+
+.close-button {
+    
+    box-sizing: border-box;
+    height: 70px;
+    padding-left: 55px;
+    padding-right: 55px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+
+    background-color: rgb(122, 0, 0);
+
+    font-weight: bold;
+    color:white;
+    font-size: 1.9rem;
+
+    transition: ease 0.5s background-color;
+    cursor: pointer;
+
+    margin-bottom: 20px;
+}
+
+
+
+
+
+/* Cards page */
+
+.cards-page {
+    padding-left: 8%;
+    padding-right: 8%;
+
+    background-color: green;
+    height: 1000px;
+    padding-top: 100px;
+
+}
+
+
+a{
+    text-decoration: none;
+}
+.cards-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 22px 50px 22px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 50px;
+    position: relative;
+}
+
+.card-picture {
+    border-radius: 10px;
+    position:relative;
+    overflow: hidden;
+
+}
+
+.card-picture .card-image {
+    width: 100%;
+}
+
+.card {
+    border: solid 2px grey;
+    display: flex;
+    flex-direction: column;
+    padding: 30px; 
+    border-radius: 30px;
+    position: relative;
+
+}
+
+.card-title {
+    font-size: 1.6rem;
+}
+
+.tags {
+    border-radius: 30px;
+    border: 1px solid rgb(192, 103, 233);
+    padding: 4px 8px;
+    color: rgb(162, 100, 220);
+    background-color: rgb(217, 177, 255);
+
+    font-weight: 400;
+    cursor: pointer;
+
+    margin-left: 2px;
+}
+
+.card-buy {
+    width: 100%;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    background-color: rgb(96, 96, 96);
+    cursor: pointer;
+
+    margin-top: 23px;
+   
+
+}
+
+
+@media (max-width: 768px) {
+
+    html {
+        font-size: 13px;
+    }
+
+    .cards-container{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .header {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .hero-page {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+    .cards-page {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+
+    .hero-title {
+        font-weight: bold;
+        color: white;
+        letter-spacing: 5px;
+        font-size: 4rem;
+
+        line-height: 1;
+
+        margin-bottom: 40px;
+    }
+
+    .hero-page-left {
+        width: 100%;
+        height: calc(100vh - 250px);
+        justify-content: center;
+    }
+    .hero-join-button {
+        width: 100%;
+    }
+}
