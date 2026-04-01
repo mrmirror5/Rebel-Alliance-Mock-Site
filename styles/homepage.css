@@ -1,22 +1,23 @@
 @font-face {
     font-family: spaceFont;
-    src: url(fontit/Titling-Gothic-Regular.ttf)
+    src: url(../fontit/Titling-Gothic-Regular.ttf)
 }
 
 @font-face {
     font-family: spaceFont;
-    src: url(fontit/Titling-Gothic-Bold.ttf);
+    src: url(../fontit/Titling-Gothic-Bold.ttf);
     font-weight: bold;
 }
 @font-face {
     font-family: spaceFontMid;
-    src: url(fontit/Titling-Gothic-Medium.ttf);
+    src: url(../fontit/Titling-Gothic-Medium.ttf);
 }
 
 
 body {
     font-family: spaceFont;
     margin: 0px;
+    
 }
 
 html {
@@ -109,6 +110,8 @@ html {
     margin-left: 15px;
     cursor: pointer;
     font-size: 1.8rem;
+    text-decoration: none;
+    color: white ;
 }
 
 .rebel-logo {
@@ -372,8 +375,18 @@ h1 {
     height: 1000px;
     padding-top: 100px;
 
+
 }
 
+.cards-main-title {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    font-size: 3.6rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: white;
+}
 
 a{
     text-decoration: none;
@@ -381,7 +394,7 @@ a{
 .cards-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 50px 22px 50px 22px;
+    padding: 50px 0px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
@@ -398,6 +411,12 @@ a{
 
 .card-picture .card-image {
     width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.shrek-img {
+    object-position: 100% 30%;
 }
 
 .card {
@@ -408,10 +427,17 @@ a{
     border-radius: 30px;
     position: relative;
 
+
+    background-image: radial-gradient(circle at 10px 10px, rgb(58, 58, 58) 10px, rgb(231, 29, 29));
+    background-size: 40px 40px;
+
+    padding-bottom: 80px;
 }
 
 .card-title {
     font-size: 1.6rem;
+    letter-spacing: 1px;
+    color: white;
 }
 
 .tags {
@@ -425,19 +451,32 @@ a{
     cursor: pointer;
 
     margin-left: 2px;
+    margin-bottom: 2px;
+    
 }
 
 .card-buy {
-    width: 100%;
     border: none;
     color: white;
     padding: 12px 24px;
     background-color: rgb(96, 96, 96);
     cursor: pointer;
 
-    margin-top: 23px;
-   
+    position: absolute;
+    bottom: 3%;
+    left: 10%; 
+    right: 10%;
 
+    border-radius: 10px;
+
+    transition: ease background-color 0.2s;
+    transition: ease font-weight 0.2s;
+   
+}
+
+.card-buy:hover {
+    background-color: rgb(148, 148, 148);
+    font-weight: bold;
 }
 
 
@@ -450,7 +489,9 @@ a{
     .cards-container{
         display: grid;
         grid-template-columns: 1fr;
+
     }
+
 
     .header {
         padding-left: 4%;
